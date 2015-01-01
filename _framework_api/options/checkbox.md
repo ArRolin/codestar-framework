@@ -79,7 +79,7 @@ array(
 
 ### CHECKBOX WITH "PAGES"
 
-> Checkbox with default wordpress pages [see for more query_args](http://codex.wordpress.org/Function_Reference/get_pages){:target="_blank"}
+> Checkbox with default wordpress pages [see for more query_args](http://codex.wordpress.org/Function_Reference/get_pages)
 
 {% highlight php startinline hl_lines=5 %}
 array(
@@ -105,11 +105,11 @@ array(
 {% endhighlight %}
 
 We are getting wordpress default pages via `get_pages( $args )` function. And you can use wordpress core query args here.
-[see for more query_args](http://codex.wordpress.org/Function_Reference/get_pages){:target="_blank"}
+[see for more query_args](http://codex.wordpress.org/Function_Reference/get_pages)
 
 ### CHECKBOX WITH POSTS
 
-> Checkbox with default wordpress posts [learn more query_args](http://codex.wordpress.org/Function_Reference/get_posts){:target="_blank"}
+> Checkbox with default wordpress posts [learn more query_args](http://codex.wordpress.org/Function_Reference/get_posts)
 
 {% highlight php startinline %}
 array(
@@ -126,7 +126,7 @@ array(
 
 ### CHECKBOX WITH CATEGORIES
 
-> Checkbox with default wordpress categories [learn more query_args](http://codex.wordpress.org/Function_Reference/get_categories){:target="_blank"}
+> Checkbox with default wordpress categories [learn more query_args](http://codex.wordpress.org/Function_Reference/get_categories)
 
 {% highlight php startinline %}
 array(
@@ -143,7 +143,7 @@ array(
 
 ### CHECKBOX WITH TAGS
 
-> Checkbox with default wordpress post tags [learn more query_args](http://codex.wordpress.org/Function_Reference/get_terms){:target="_blank"}
+> Checkbox with default wordpress post tags [learn more query_args](http://codex.wordpress.org/Function_Reference/get_terms)
 
 {% highlight php startinline %}
 array(
@@ -160,7 +160,7 @@ array(
 
 ### CHECKBOX WITH CUSTOM POST TYPE POSTS
 
-> Checkbox with CPT (custom post type) posts [learn more query_args](http://codex.wordpress.org/Function_Reference/get_posts){:target="_blank"}
+> Checkbox with CPT (custom post type) posts [learn more query_args](http://codex.wordpress.org/Function_Reference/get_posts)
 
 {% highlight php startinline %}
 array(
@@ -178,7 +178,7 @@ array(
 
 ### CHECKBOX WITH CUSTOM POST TYPE CATEGORIES
 
-> Checkbox with CPT (custom post type) categories [learn more query_args](http://codex.wordpress.org/Function_Reference/get_categories){:target="_blank"}
+> Checkbox with CPT (custom post type) categories [learn more query_args](http://codex.wordpress.org/Function_Reference/get_categories)
 
 {% highlight php startinline %}
 array(
@@ -197,7 +197,7 @@ array(
 
 ### CHECKBOX WITH CUSTOM POST TYPE TAGS
 
-> Checkbox with CPT (custom post type) tags [learn more query_args](http://codex.wordpress.org/Function_Reference/get_terms){:target="_blank"}
+> Checkbox with CPT (custom post type) tags [learn more query_args](http://codex.wordpress.org/Function_Reference/get_terms)
 
 {% highlight php startinline %}
 array(
