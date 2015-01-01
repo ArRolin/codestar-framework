@@ -1,0 +1,348 @@
+@import "mixins";
+
+$basecolor:             #337ab7;
+$gradient_start:        #286192;
+$gradient_end:          #337ab7;
+$base_highlight_color:  #99bcdb;
+
+body{
+  background-color: #f5f5f5;
+}
+
+/* site logo */
+.cs-logo{
+  float: left;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  padding: 5px 10px;
+  margin-top: 10px;
+  color: $basecolor;
+  border: 1px solid $base_highlight_color;
+  @include border-radius(3px);
+
+  &:hover{
+    color: $basecolor;
+    text-decoration: none;
+  }
+}
+
+/* site-header */
+.cs-header,
+.cs-page-header {
+  position: relative;
+  background-image: -moz-linear-gradient($gradient_start, $gradient_end);
+  background-image: -webkit-linear-gradient($gradient_start, $gradient_end);
+  background-image: linear-gradient($gradient_start, $gradient_end);
+  background-image: url('../images/octicons-bg.png');
+  background-color: $gradient_start;
+}
+
+.cs-header {
+  text-align: center;
+  padding: 150px 0;
+
+  h1 {
+    color: #fff;
+    font-size: 60px;
+    margin: 0 0 15px 0;
+  }
+
+  h3 {
+    font-size: 24px;
+    margin: 0 0 30px 0;
+    color: $base_highlight_color;
+  }
+
+  .btn {
+    padding: 20px 40px;
+    font-size: 20px;
+
+    small{
+      font-size: 12px;
+      color: $base_highlight_color;
+    }
+
+    .octicon{
+      font-size: 120%;
+      margin-right: 5px;
+    }
+  }
+
+  .version{
+    font-size: 12px;
+    margin-top: 10px;
+    color: $base_highlight_color;
+  }
+}
+
+/* site-nav */
+.cs-nav {
+  margin-bottom: 0;
+  border-bottom: 0;
+  background-color: #fff;
+
+  .navbar-nav{
+    > li {
+      > a {
+        font-weight: 500;
+        color: $basecolor;
+
+        &:hover{
+          color: #555;
+          background-color: #f9f9f9;
+        }
+      }
+    }
+
+    .page-documentation{
+      color: #fff;
+      background-color: #5cb85c;
+
+      &:hover{
+        color: #fff;
+        background-color: #4cae4c;
+      }
+    }
+  }
+}
+
+/* page-headers */
+.cs-page-header{
+  font-size: 20px;
+  padding: 60px 0;
+
+  h1{
+    font-size: 60px;
+    margin-top: 0;
+    color: #fff;
+  }
+
+  p{
+    margin-bottom: 0;
+    line-height: 1.4;
+    color: $base_highlight_color;
+  }
+}
+
+/* btn-outline */
+.btn-outline {
+  color: $basecolor;
+  border-color: $basecolor;
+  background-color: transparent;
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: #fff;
+    border-color: $basecolor;
+    background-color: $basecolor;
+  }
+}
+
+/* Inverted outline button (white on dark) */
+.btn-outline-inverse {
+  color: #fff;
+  background-color: transparent;
+  border-color: $base_highlight_color;
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: $basecolor;
+    text-shadow: none;
+    background-color: #fff;
+    border-color: #fff;
+  }
+}
+
+.cs-content{
+  background-color: #fff;
+  padding: 50px 0;
+}
+
+.cs-post{
+  margin-bottom: 100px;
+
+  &:last-child{
+    margin-bottom: 0;
+  }
+}
+
+/* footer */
+.cs-footer {
+  position: relative;
+  padding: 40px 0;
+  text-align: center;
+  color: #9a9a9a;
+  background-color: #f5f5f5;
+  border-top: 1px solid #e5e5e5;
+  @include text-shadow(0 1px 0 #fff);
+
+  .links{
+    padding-left: 0;
+    margin-top: 20px;
+
+    li {
+      display: inline;
+      padding: 0 2px;
+
+      &:first-child {
+        padding-left: 0;
+      }
+    }
+
+    .page-documentation{
+      color: #4cae4c;
+
+      &:hover{
+        color: #5cb85c;
+      }
+    }
+  }
+
+  .social {
+    margin-bottom: 20px;
+    text-align: center;
+
+    ul {
+      display: inline-block;
+      padding-left: 0;
+      margin-bottom: 0;
+      list-style: none;
+
+      li {
+        display: inline-block;
+        padding: 5px 0;
+        line-height: 1;
+
+        iframe {
+          overflow: hidden;
+          border: 0;
+        }
+      }
+
+      .github-btn{
+        width: 90px;
+      }
+    }
+  }
+
+}
+
+.github-fork{
+  position: absolute;
+  top: 0;
+  right: 0;
+  border: 0;
+  z-index: 9999;
+}
+
+/* others */
+.cs-4in1{
+  font-size: 75px;
+  .cs-icon-4x{
+    display: inline-block;
+    font-size: 18px;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    font-weight: bold;
+    color: #fff;
+    background-color: #337ab7;
+    vertical-align: top;
+    margin: 20px 5px 0 5px;
+    @include border-radius(40px);
+  }
+}
+
+.cs-divider {
+  width: 100px;
+  margin: 40px auto;
+  border-color: #ddd;
+}
+
+.cs-mini-divider {
+  width: 75px;
+  margin: 15px auto;
+  border-color: #ddd;
+}
+
+.cs-space-50{  margin: 25px 0;  }
+.cs-space-100{ margin: 50px 0;  }
+.cs-space-200{ margin: 100px 0; }
+
+.cs-icon{
+  font-size: 25px;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  margin-bottom: 10px;
+  color: #fff;
+  background-color: #5cb85c;
+  @include border-radius(50px);
+}
+
+.cs-promo {
+  max-width: 100%;
+  height: auto;
+}
+
+#tf-items{
+  .btn{
+    width: 100%;
+  }
+
+  .tf-item{
+    height: 275px;
+  }
+
+  img{
+    width: 100%;
+    margin-bottom: 20px;
+    @include border-radius(3px);
+  }
+}
+
+.pagination .disabled{
+  opacity: 0.75;
+}
+
+@media (max-width: 1400px) {
+  .github-fork-link{
+    display: none;
+  }
+}
+
+@media (max-width: 1000px) {
+  .cs-header {
+    padding: 75px 0;
+
+    h1{
+      font-size: 40px;
+    }
+
+    h3{
+      font-size: 16px;
+    }
+
+    .btn{
+      width: auto;
+      font-size: 15px;
+    }
+  }
+
+  .cs-logo{
+    font-size: 10px;
+    margin-left: 12px;
+    margin-top: 12px;
+  }
+
+  .nav > li > a{
+    padding-right: 7px;
+    padding-left: 7px;
+    font-size: 12px;
+  }
+}

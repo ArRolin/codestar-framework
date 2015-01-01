@@ -1,0 +1,69 @@
+<footer class="cs-footer" role="contentinfo">
+  <div class="container">
+
+    <a href="http://themeforest.net/item/route-responsive-multipurpose-wordpress-theme/8815770?ref=Codestar" target="_blank"><img src="http://s3.routewp.com/promo/userbox/route-preview-promo.png" class="cs-promo" alt="" /></a>
+
+    <hr />
+
+    <div class="social">
+      <ul>
+        <li><iframe class="github-btn" src="http://ghbtns.com/github-btn.html?user=Codestar&amp;repo=codestar-framework&amp;type=watch&amp;count=true" width="100" height="20" title="Star on GitHub"></iframe></li>
+        <li><iframe class="github-btn" src="http://ghbtns.com/github-btn.html?user=Codestar&amp;repo=codestar-framework&amp;type=fork&amp;count=true" width="102" height="20" title="Fork on GitHub"></iframe></li>
+        <li><a href="https://twitter.com/codestarlive" class="twitter-follow-button" data-link-color="#0069D6" data-show-count="true">Follow @codestarlive</a></li>
+        <li><a href="https://twitter.com/share" class="twitter-share-button" data-url="http://codestarlive.com/" data-count="horizontal" data-via="codestarlive" data-related="mdo:Creator of Codestar">Tweet</a></li>
+      </ul>
+    </div>
+
+    <ul class="links">
+      <li><a href="{{ site.baseurl }}/codestar/">Codestar</a></li>
+      <li>&middot;</li>
+      <li><a href="{{ site.baseurl }}/themes/">Themes</a></li>
+      <li>&middot;</li>
+      <li><a href="{{ site.baseurl }}/documentation/" class="page-documentation">Documentation</a></li>
+      <li>&middot;</li>
+      <li><a href="{{ site.baseurl }}/license/">License</a></li>
+      <li>&middot;</li>
+      <li><a href="{{ site.baseurl }}/credits/">Credits</a></li>
+      <li>&middot;</li>
+      <li><a href="{{ site.github }}/issues/" target="_blank">Issues</a></li>
+      <li>&middot;</li>
+      <li><a href="{{ site.github }}/pulls/" target="_blank">Requests</a></li>
+      <li>&middot;</li>
+      <li><a href="{{ site.github }}/releases/" target="_blank">Releases</a></li>
+      <li>&middot;</li>
+      <li><a href="{{ site.github }}/" target="_blank">Github</a></li>
+    </ul>
+
+  </div>
+</footer>
+
+<a href="{{ site.github }}/" target="_blank" class="github-fork-link"><img class="github-fork" src="https://camo.githubusercontent.com/38ef81f8aca64bb9a64448d0d70f1308ef5341ab/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6461726b626c75655f3132313632312e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png"></a>
+
+<script type="text/javascript">
+var site_url  = '{{site.baseurl}}';
+var page_slug = '{{page.title | slugify }}';
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/helpers/jquery.fancybox-thumbs.js"></script>
+<script src="{{ "/assets/js/jquery.codestar.js" | prepend: site.baseurl }}"></script>
+
+<script>
+  window.twttr = (function (d,s,id) {
+    var t, js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return; js=d.createElement(s); js.id=id; js.async=1;
+    js.src="https://platform.twitter.com/widgets.js"; fjs.parentNode.insertBefore(js, fjs);
+    return window.twttr || (t = { _e: [], ready: function(f){ t._e.push(f) } });
+  }(document, "script", "twitter-wjs"));
+</script>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', '{{ site.google_analytics }}', 'auto');
+  ga('send', 'pageview');
+</script>

@@ -1,0 +1,26 @@
+# Basic
+title: Codestar Framework
+description: A Lightweight and easy-to-use WordPress Options Framework
+
+# Project
+# baseurl: /codestar-framework
+url: http://codestarframework.com
+port: 1986
+version: 1.0.0
+
+# Settings
+permalink: pretty
+markdown: kramdown
+exclude: ['README.md', 'Guardfile']
+
+# Github
+github: https://github.com/Codestar/codestar-framework
+zipball: /archive/master.zip
+
+# Google Analytics
+google_analytics: UA-21936069-3
+
+# Collections
+collections:
+  framework_api:
+    output: true

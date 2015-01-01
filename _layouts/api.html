@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width initial-scale=1">
+    <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
+    <link rel="stylesheet" href="{{ "/assets/css/api.css" | prepend: site.baseurl }}">
+  </head>
+<body>
+
+  <a href="#" id="nav-button"><span>NAV <img src="{{ "/assets/images/navbar.png" | prepend: site.baseurl }}" /></span></a>
+
+  <div class="tocify-wrapper">
+
+    <a href="{{ site.baseurl }}/"><img src="{{ "/assets/images/logo.png" | prepend: site.baseurl }}" /></a>
+
+    <div class="search">
+      <input type="text" class="search" id="input-search" placeholder="Search">
+    </div>
+
+    <ul class="search-results"></ul>
+
+    <div id="toc"></div>
+
+    <ul class="toc-footer">
+      <li>&larrhk; <a href="{{ site.baseurl }}/">Go to Main Site</a></li>
+      <li><a href="http://github.com/tripit/slate" target="_blank">Documentation Powered by Slate</a></li>
+      <li class="cs-promo"><a href="http://themeforest.net/item/route-responsive-multipurpose-wordpress-theme/8815770?ref=Codestar" target="_blank"><img src="http://s3.routewp.com/promo/userbox/route-preview-promo.png" alt=""></a></li>
+    </ul>
+
+  </div>
+
+  <div class="page-wrapper">
+
+    <div class="dark-box"></div>
+
+    <div class="content">
+
+      {% assign sorted_api = site[page.collection] | sort:"weight" %}
+
+      {% for p in sorted_api %}
+
+        {% assign edit = "/edit/gh-pages/_" | prepend: site.github | append: page.collection | append: "/" | append: p.filename %}
+
+        {% if p.type == 'h1' %}
+        <h1 id="{{ p.title | slugify }}">{{ p.title }}{% if p.filename %}<a href="{{ edit }}" class="edit-doc"></a>{% endif %}</h1>
+        {% endif %}
+
+        {% if p.type == 'h2' %}
+        <h2 id="{{ p.title | slugify }}">{{ p.title }}{% if p.filename %}<a href="{{ edit }}" class="edit-doc"></a>{% endif %}</h2>
+        {% endif %}
+
+        {{ p.content }}
+
+      {% endfor %}
+
+    </div>
+
+    <div class="dark-box"></div>
+
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+  <script src="{{ "/assets/js/all.js" | prepend: site.baseurl }}" type="text/javascript"></script>
+
+</body>
+</html>

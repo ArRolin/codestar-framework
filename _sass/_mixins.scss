@@ -1,0 +1,9 @@
+@mixin border-radius( $radius ) {
+  -webkit-border-radius: #{$radius};
+  border-radius: #{$radius};
+}
+
+@mixin text-shadow( $shadow ) {
+  -webkit-shadow: #{$shadow};
+  text-shadow: #{$shadow};
+}

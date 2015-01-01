@@ -1,0 +1,71 @@
+---
+layout: default
+---
+
+<div class="cs-header">
+  <div class="container">
+    <h1>{{ site.title }}</h1>
+    <h3>{{ site.description }}</h3>
+    <a href="{{ site.github }}/archive/master.zip" class="btn btn-outline-inverse btn-lg"><i class="octicon octicon-cloud-download"></i> Download {{ site.title }}</a>
+    <div class="version">Currently v{{ site.version }}</div>
+  </div>
+</div>
+
+<div class="cs-content text-center">
+
+  <div class="container">
+
+    <h1 class="cs-4in1">4<i class="cs-icon-4x">in</i>1</h1>
+
+    <hr class="cs-mini-divider" />
+
+    <h3>WordPress Options Framework</h3>
+    <p class="text-muted">A Lightweight and <strong>easy-to-use</strong> WordPress Options Framework. It is a free framework for building theme options. Save your time!</p>
+
+    <hr />
+
+    <div class="row">
+      <div class="col-sm-3">
+        <div class="cs-icon octicon octicon-check"></div>
+        <h4>Framework Options</h4>
+        <hr class="cs-mini-divider" />
+        <p class="text-muted">Codestar Framework is built in OOP paradigm with high number of custom fields and tons of options. It's highly modern and advanced framework.</p>
+      </div>
+      <div class="col-sm-3">
+        <div class="cs-icon octicon octicon-check"></div>
+        <h4>Metaboxes Options</h4>
+        <hr class="cs-mini-divider" />
+        <p class="text-muted">Codestar Framework allows you to bring custom metabox settings to all of your pages and posts. We provide advanced settings with numerious number of fields.</p>
+      </div>
+      <div class="col-sm-3">
+        <div class="cs-icon octicon octicon-check"></div>
+        <h4>Shortcoder Options</h4>
+        <hr class="cs-mini-divider" />
+        <p class="text-muted">Codestar Framework comes with pre-built shortcode editor to manage your content. It's easy and flexible to build unlimited layouts with endless possibilites.</p>
+      </div>
+      <div class="col-sm-3">
+        <div class="cs-icon octicon octicon-check"></div>
+        <h4>Customizer Options</h4>
+        <hr class="cs-mini-divider" />
+        <p class="text-muted">Codestar Framework inherits the default WordPress Customizer with integration of own custom fields. It's more powerful to customize your site on live.</p>
+      </div>
+    </div>
+
+    <div class="clear cs-space-100"></div>
+
+    <h2 >Screenshots</h2>
+
+    <hr />
+
+    <div class="row" id="fancybox-gallery">
+      {% for key in (1..6) %}
+
+        {% assign img = "/assets/images/framework/screenshot-" | append: key | append: ".png" | prepend: site.baseurl %}
+        <div class="col-sm-2"><a href="{{ img }}" class="thumbnail"><img src="{{ img }}" alt="" /></a></div>
+
+      {% endfor %}
+    </div>
+
+  </div>
+
+</div>
