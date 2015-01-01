@@ -20,81 +20,52 @@ filename: config/customize_configure.md
 
 {% highlight php startinline %}
 if ( ! defined( 'ABSPATH' ) ) { die; } // Cannot access pages directly.
-/**
- *
- * CSFramework Shortcode Config
- *
- * @since 1.0
- * @version 1.0
- *
- */
-$panels                          = array();
+// -----------------------------------------
+// Customize Core Fields                   -
+// -----------------------------------------
+$options        = array();
+$options[]      = array(
+  'name'        => 'core_fields',
+  'title'       => 'Core Fields',
+  'settings'    => array(
 
-$panels[]                        = array(
-  'name'                         => 'panel_100',
-  'title'                        => 'Panel 100',
-  'description'                  => 'Panel color decsriptions',
-  'sections'                     => array(
+    array(
+      'name'    => 'text_option',
+      'control' => array(
+        'label' => 'Text Field',
+        'type'  => 'text',
+      ),
+    ),
 
-   // add section
-   array(
-      'name'                     => 'colors',
-      'title'                    => 'Color Options',
-      'description'              => 'All Elements Color, Just one click!',
-      'priority'                 => 10,
-      'settings'                 => array(
+    array(
+      'name'    => 'text_option_with_default',
+      'default' => 'bla bla bla',
+      'control' => array(
+        'label' => 'Text Field with Default',
+        'type'  => 'text',
+      ),
+    ),
 
-        // add setting
-        array(
-          'name'                 => 'body_background',
-          'default'              => '#000',
-          'type'                 => 'option',
-          'capability'           => 'edit_theme_options',
-          'theme_supports'       => '',
-          'transport'            => 'refresh',
-          'sanitize_callback'    => '',
-          'sanitize_js_callback' => '',
+    array(
+      'name'    => 'textarea_option',
+      'control' => array(
+        'label' => 'Textarea Field',
+        'type'  => 'textarea',
+      ),
+    ),
 
-          // add control
-          'control'              => array(
-            'label'              => 'Background Color',
-            'type'               => 'color',
-          ),
-
-        ),
-
-        // add setting
-        array(
-          'name'                 => 'body_text_color',
-          'default'              => '#fff',
-          'type'                 => 'option',
-          'capability'           => 'edit_theme_options',
-          'theme_supports'       => '',
-          'transport'            => 'refresh',
-          'sanitize_callback'    => '',
-          'sanitize_js_callback' => '',
-
-          // add control
-          'control'              => array(
-            'label'              => 'Text Color',
-            'type'               => 'radio',
-            'description'        => 'some description',
-            'choices'            => array(
-              'yes'              => 'Yes, Please.',
-              'no'               => 'No, Thank you.'),
-          ),
-
-        ), // end a setting
-
-      ), // end settings
-
-    ), // end section
-
-  ), // end sections
-
+  )
 );
 
 CSFramework_Customize::instance( $panels );
+{% endhighlight %}
+
+> How to getting options
+
+{% highlight php startinline %}
+echo cs_get_customize_option( 'text_option' );
+echo cs_get_customize_option( 'text_option_with_default' );
+echo cs_get_customize_option( 'textarea_option' );
 {% endhighlight %}
 
 Let's open `themename/cs-framework/config/customize.config.php` all examples there

@@ -67,6 +67,13 @@ $options[]    = array(
 CSFramework::instance( $settings, $options );
 {% endhighlight %}
 
+> How to getting options
+
+{% highlight php startinline %}
+echo cs_get_option( 'section_1_text' );
+echo cs_get_option( 'section_1_textarea' );
+{% endhighlight %}
+
 Let's open `themename/cs-framework/config/framework.config.php` all examples there
 
 | **Settings keys**  | **Default**    | **Description**

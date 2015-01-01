@@ -85,7 +85,7 @@ $metaboxes[]      = array(
 CSFramework_Metabox::instance( $metaboxes );
 {% endhighlight %}
 
-> How to get options from front-page
+> How to getting options
 
 {% highlight php startinline %}
 $meta_data = get_post_meta( POST_ID, '_custom_meta_options', true );
