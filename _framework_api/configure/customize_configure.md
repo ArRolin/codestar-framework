@@ -5,7 +5,7 @@ weight: 304
 filename: config/customize_configure.md
 ---
 
-{% highlight text hl_lines="8" %}
+{% highlight text hl_lines=8 %}
 .
 ├── themename
 |   ├── cs-framework
