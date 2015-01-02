@@ -2,14 +2,14 @@
 A Lightweight and easy-to-use WordPress Options Framework. It is a free framework for building theme options. Save your time!
 
 ## Screenshot
-[![Codestar Framework Screenshot](https://cloud.githubusercontent.com/assets/1313301/5592078/4811ee9e-91ba-11e4-8c1e-fc01ee210c5b.png)](http://codestarframework.com/assets/images/framework/screenshot-1.png)
+[![Codestar Framework Screenshot](http://codestarframework.com/assets/images/framework/screenshot.png)](http://codestarframework.com/assets/images/framework/screenshot-1.png)
 
 ## [Documentation](http://codestarframework.com/documentation/)
 Read the documentation for details [documentation](http://codestarframework.com/documentation/)
 
 ## Installation
 ##### A) Usage as Theme
-* Download the package from github repo.
+* Download zip file from github repository
 * Extract download zip on `themename/cs-framework` folder under your theme directory
 * Add framework include code on your theme `themename/functions.php` file
 
@@ -22,8 +22,9 @@ require_once dirname( __FILE__ ) .'/cs-framework/cs-framework.php';
 * Read for more from [documentation](http://codestarframework.com/documentation/)
 
 ##### B) Usage as Plugin
-* Download the package from github repo.
-* Extract download zip on `wp-content/plugins/cs-framework` folder under your plugin directory
+* Download zip file from github repository
+* **Way1** Extract download zip on `wp-content/plugins/cs-framework` folder under your plugin directory
+* **Way2** Upload zip file from `wordpess plugins panel -> add new -> upload plugin`
 * Active Codestar Framework plugin from wordpress plugins panel
 * Yay! Right now you are ready to configure framework, metaboxes, wp customize, shortcoder
 * Take a look for config files from `wp-content/plugins/cs-framework/config` folder also you can manage config files from theme directory. see overriding files method.
@@ -96,7 +97,7 @@ Codestar Framework is **free** to use both personal and commercial. If you used 
 Read more about GNU [license.txt](http://www.gnu.org/licenses/gpl-2.0.txt)
 
 ## Credits
-Thanks for guys! Please read [credits](http://codestarframework.com/credits/). If you would like to contribute please fork the project and <a href="https://github.com/RouteWP/smart-git/issues">report bugs</a> or submit <a href="https://github.com/RouteWP/smart-git/pulls">pull requests</a>.
+Thanks for guys! Please read [credits](http://codestarframework.com/credits/). If you would like to contribute please fork the project and [report bugs](https://github.com/Codestar/codestar-framework/issues) or submit [pull requests](https://github.com/Codestar/codestar-framework/pulls)</a>.
 
 ## Changelog
 #### v1.0.0
