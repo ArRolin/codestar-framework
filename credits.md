@@ -31,4 +31,9 @@ description: "Thanks you very much for authors!"
     <td>Patrick Filler</td>
     <td>Licensed under the MIT License</td>
   </tr>
+  <tr>
+    <td><a href="https://github.com/FortAwesome/Font-Awesome">Font Awesome</a></td>
+    <td>Dave Gandy</td>
+    <td>Licensed under the MIT License</td>
+  </tr>
 </table>
