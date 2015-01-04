@@ -445,7 +445,6 @@
   $.widget( 'ui.dialog', $.ui.dialog, {
       _createOverlay: function() {
         this._super();
-        this.button.find('.ui-dialog-titlebar-close').addClass('ui-button');
         if ( !this.options.modal ) { return; }
         this._on(this.overlay, {click: 'close'});
       }
@@ -487,6 +486,9 @@
           position: {my: 'center', at: 'center', of: window},
           open: function() {
 
+            // fix button for VC
+            $('.ui-dialog-titlebar-close').addClass('ui-button');
+
             // set viewpoint
             $(window).on('resize', function () {
 
@@ -500,7 +502,7 @@
 
             }).resize();
 
-          }
+          },
         });
 
         // load icons
@@ -614,6 +616,9 @@
           closeOnEscape: true,
           position: {my: 'center', at: 'center', of: window},
           open: function() {
+
+            // fix button for VC
+            $('.ui-dialog-titlebar-close').addClass('ui-button');
 
             // set viewpoint
             $(window).on('resize', function () {
