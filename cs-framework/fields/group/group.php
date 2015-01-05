@@ -22,7 +22,7 @@ class CSFramework_Option_group extends CSFramework_Options {
 
     echo '<div class="cs-group hidden">';
 
-      echo '<h3>'. $accordion_title .'</h3>';
+      echo '<h4>'. $accordion_title .'</h4>';
       echo '<div class="cs-group-content">';
       foreach ( $this->field['fields'] as $field_key => $field ) {
         $field['sub']   = true;
@@ -52,7 +52,7 @@ class CSFramework_Option_group extends CSFramework_Options {
           }
 
           echo '<div class="cs-group">';
-          echo '<h3>'. $this->field['fields'][0]['title'] .': '. $title .'</h3>';
+          echo '<h4>'. $this->field['fields'][0]['title'] .': '. $title .'</h4>';
           echo '<div class="cs-group-content">';
 
           foreach ( $this->field['fields'] as $field_key => $field ) {

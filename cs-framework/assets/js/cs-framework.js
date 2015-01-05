@@ -310,7 +310,7 @@
 
       if ( accordion_group.length ) {
         accordion_group.accordion({
-          header: '> div > h3',
+          header: '> div > h4',
           collapsible : true,
           active: false,
           animate: 250,
@@ -327,7 +327,7 @@
 
       field_groups.sortable({
         axis: 'y',
-        handle: 'h3',
+        handle: 'h4',
         helper: 'clone',
         cursor: 'move',
         placeholder: 'widget-placeholder',
@@ -339,7 +339,7 @@
           }
         },
         stop: function( event, ui ) {
-          ui.item.children( 'h3' ).triggerHandler( 'focusout' );
+          ui.item.children( 'h4' ).triggerHandler( 'focusout' );
           accordion_group.accordion({ active:false });
         }
       });
