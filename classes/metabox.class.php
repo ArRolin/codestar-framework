@@ -146,17 +146,16 @@ class CSFramework_Metabox extends CSFramework_Abstract{
   }
 
   // save metabox options
-  public function save_post( $post_id ){
+  public function save_post( $post_id ) {
 
     if ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE ) { return $post_id; }
 
-    $nonce       = @$_POST['cs-framework-metabox-nonce'];
-    $post_type   = get_current_screen()->post_type;
-    $meta_errors = array();
-
-    if ( ! isset( $nonce ) ) { return $post_id; }
+    $nonce = ( isset( $_POST['cs-framework-metabox-nonce'] ) ) ? $_POST['cs-framework-metabox-nonce'] : '';
 
     if ( ! wp_verify_nonce( $nonce, 'cs-framework-metabox' ) ) { return $post_id; }
+
+    $post_type   = ( isset( $_POST['post_type'] ) ) ? $_POST['post_type'] : '';
+    $meta_errors = array();
 
     if ( 'page' == $post_type ) {
       if ( ! current_user_can( 'edit_page', $post_id ) ) { return $post_id; }

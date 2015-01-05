@@ -647,10 +647,6 @@
     display: none;
     position: relative;
 
-    h3{
-      color: $acc_text_color;
-    }
-
     h4{
       font-size: 1em;
     }
@@ -719,11 +715,11 @@
   }
 
   .ui-accordion .ui-accordion-icons {
-    padding-left: 2.2em;
+    padding-left: 30px;
   }
 
   .ui-accordion .ui-accordion-icons .ui-accordion-icons {
-    padding-left: 2.2em;
+    padding-left: 30px;
   }
 
   .ui-accordion .ui-accordion-header .ui-accordion-header-icon {

@@ -981,9 +981,6 @@
   display: none;
   position: relative;
 }
-.cs-field-group .cs-group h3 {
-  color: #555;
-}
 .cs-field-group .cs-group h4 {
   font-size: 1em;
 }
@@ -1040,10 +1037,10 @@
   font-size: 100%;
 }
 .cs-field-group .ui-accordion .ui-accordion-icons {
-  padding-left: 2.2em;
+  padding-left: 30px;
 }
 .cs-field-group .ui-accordion .ui-accordion-icons .ui-accordion-icons {
-  padding-left: 2.2em;
+  padding-left: 30px;
 }
 .cs-field-group .ui-accordion .ui-accordion-header .ui-accordion-header-icon {
   position: absolute;
