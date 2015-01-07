@@ -16,12 +16,25 @@ class CSFramework_Option_color_picker extends CSFramework_Options {
   public function output() {
 
     echo $this->element_before();
-    echo '<input type="text" name="'. $this->element_name() .'" value="'. $this->element_value() .'"'. $this->element_class( 'cs-color-picker' ) . $this->element_attributes( $this->is_rgba() ) .'/>';
+    echo '<input type="text" name="'. $this->element_name() .'" value="'. $this->element_value() .'"'. $this->element_class( 'cs-color-picker' ) . $this->element_attributes( $this->extra_attributes() ) .'/>';
     echo $this->element_after();
 
   }
 
-  public function is_rgba() {
-    return ( isset( $this->field['rgba'] ) &&  $this->field['rgba'] === false ) ? array( 'data-rgba' => 'false' ) : '';
+  public function extra_attributes() {
+
+    $atts = array();
+
+    if ( isset( $this->field['rgba'] ) &&  $this->field['rgba'] === false ) {
+      $atts['data-rgba'] = 'false';
+    }
+
+    if( isset( $this->field['default'] ) ) {
+      $atts['data-default-color'] = $this->field['default'];
+    }
+
+    return $atts;
+
   }
+
 }
